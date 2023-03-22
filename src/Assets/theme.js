@@ -5,11 +5,11 @@ const MUITheme = createTheme({
   breakpoints: {
     keys: ["xs", "sm", "md", "lg", "xl"],
     values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1194,
-      xl: 1920
+      xs: 550,
+      sm: 767,
+      md: 991,
+      lg: 1199,
+      xl: 1440
     }
   },
   palette: {

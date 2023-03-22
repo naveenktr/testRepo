@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import SideBar from "./Sidebar";
 import SideBarRight from './SideBarRight';
+import { DashBoardWrapper } from "./styles";
 
 const Layout =(props)=>{
     const{children}=props;
@@ -29,14 +30,13 @@ const Layout =(props)=>{
                 }}
                 >
                 <Toolbar/>
-                <Box sx={{display:'flex',minHeight: 'calc(100% - 68px)'}}>
+                <DashBoardWrapper>
                     <Box sx={{width:'100%',padding:'0px 15px'}}>
                         {children}
                         <Footer />
                     </Box>
                     <SideBarRight/>
-                </Box>
-                
+                </DashBoardWrapper>
             </Box>
         </Box>
         </>
