@@ -3,7 +3,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./Assets/theme";
 import Layout from "./Components/Shared/Layout/Layout";
-import "./index.css";
 
 export default function App() {
   return (
