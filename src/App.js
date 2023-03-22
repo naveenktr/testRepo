@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./Assets/theme";
+import Layout from "./Components/Shared/Layout/Layout";
+import "./index.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Layout>
+        <>
+          <div className="App">
+            <h1>Hello CodeSandbox</h1>
+            <h2>Start editing to see some magic happen!</h2>
+            <Grid container justifyContent="center">
+              <Grid item xs={12} sm={10} md={8}>
+                Test
+              </Grid>
+            </Grid>
+          </div>
+        </>
+      </Layout>
+    </ThemeProvider>
   );
 }
-
-export default App;
