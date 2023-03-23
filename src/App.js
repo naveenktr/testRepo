@@ -1,7 +1,8 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./Assets/theme";
+import CustomCard from "./Components/Card/Card";
 import Layout from "./Components/Shared/Layout/Layout";
 
 export default function App() {
@@ -11,13 +12,20 @@ export default function App() {
       <Layout>
         <>
           <div className="App">
-            <h1>Hello CodeSandbox</h1>
-            <h2>Start editing to see some magic happen!</h2>
-            <Grid container justifyContent="center">
-              <Grid item xs={12} sm={10} md={8}>
-                Test
+            <Typography variant="h5" mt={2} mb={2} color={theme.palette.text.blue.primary}>Real World Regulatory Intelligence Offering</Typography>
+            <div>
+              <Grid container spacing={2}>
+                <Grid item sm={4}>
+                  <CustomCard text="Total number of records in the form" number={11345} variant="blue"/>
+                </Grid>
+                <Grid item sm={4}>
+                  <CustomCard text="Total number of records Added in last week" number={1230} variant="white"/>
+                </Grid>
+                <Grid item sm={4}>
+                  <CustomCard text="Total number of records modified/deleted in last week" number={756} variant="orange"/>
+                </Grid>
               </Grid>
-            </Grid>
+            </div>
           </div>
         </>
       </Layout>

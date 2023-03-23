@@ -32,7 +32,7 @@ const MUITheme = createTheme({
         tertiary: "#E8F4FE"
       },
       blue: {
-        primary: "#1983D9",
+        primary: "#042586",
         secondary: "#259BEB",
         tertiary: "#136BD6"
       }
