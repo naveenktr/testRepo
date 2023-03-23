@@ -19,10 +19,10 @@ export default function App() {
                   <CustomCard text="Total number of records in the form" number={11345} variant="blue"/>
                 </Grid>
                 <Grid item sm={4}>
-                  <CustomCard text="Total number of records in the form" number={11345} variant="white"/>
+                  <CustomCard text="Total number of records Added in last week" number={1230} variant="white"/>
                 </Grid>
                 <Grid item sm={4}>
-                  <CustomCard text="Total number of records in the form" number={11345} variant="orange"/>
+                  <CustomCard text="Total number of records modified/deleted in last week" number={756} variant="orange"/>
                 </Grid>
               </Grid>
             </div>
