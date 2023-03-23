@@ -1,8 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+import { Box } from "@mui/system";
 import theme from "./Assets/theme";
 import CustomCard from "./Components/Card/Card";
+import DashboardTable from "./Components/DashboardTable/DashboardTable";
 import Layout from "./Components/Shared/Layout/Layout";
 
 export default function App() {
@@ -26,6 +28,9 @@ export default function App() {
                 </Grid>
               </Grid>
             </div>
+            <Box mt={2}>
+              <DashboardTable/>
+            </Box>
           </div>
         </>
       </Layout>
