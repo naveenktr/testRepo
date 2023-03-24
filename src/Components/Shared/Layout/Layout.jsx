@@ -1,6 +1,5 @@
 import { Box, Toolbar } from '@mui/material';
 import * as React from 'react';
-import Footer from "./Footer";
 import Header from "./Header";
 import SideBar from "./Sidebar";
 import SideBarRight from './SideBarRight';
@@ -33,7 +32,6 @@ const Layout =(props)=>{
                 <DashBoardWrapper>
                     <Box sx={{width:'100%',padding:'0px 15px'}}>
                         {children}
-                        <Footer />
                     </Box>
                     <SideBarRight/>
                 </DashBoardWrapper>
