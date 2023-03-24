@@ -10,7 +10,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   const CustomChip = styled(Chip)(({ theme,type }) => ({
-    fontSize:'14px',
+    fontSize:'14px', 
     borderRadius:'5px',
     ...(type==="Encap" && {
         backgroundColor:'#d4edda',

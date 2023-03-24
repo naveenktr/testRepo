@@ -49,7 +49,7 @@ const DashboardTable=()=> {
               <TableCell>{row.lasDateScrap}</TableCell>
               <TableCell>{row.status}</TableCell>
               <TableCell>{row.totalRec}</TableCell>
-              <TableCell>{row.nextSchedule}</TableCell>
+              <TableCell>{row.nextSchedule}</TableCell> 
             </TableRow>
           ))}
         </TableBody>
