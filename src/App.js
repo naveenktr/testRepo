@@ -6,16 +6,17 @@ import theme from "./Assets/theme";
 import CustomCard from "./Components/Card/Card";
 import DashboardTable from "./Components/DashboardTable/DashboardTable";
 import Layout from "./Components/Shared/Layout/Layout";
+import ChartPage from "./Components/ChartPage";
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Layout>
+      <Layout rightNav={false}>
         <>
           <div className="App">
             <Typography variant="h5" mt={2} mb={2} color={theme.palette.text.blue.primary}>Real World Regulatory Intelligence Offering</Typography>
-            <div>
+            {/* <div>
               <Grid container spacing={2}>
                 <Grid item sm={4}>
                   <CustomCard text="Total number of records in the form" number={11345} variant="blue"/>
@@ -30,7 +31,8 @@ export default function App() {
             </div>
             <Box mt={2}>
               <DashboardTable/>
-            </Box>
+            </Box> */}
+            <ChartPage/>
           </div>
         </>
       </Layout>

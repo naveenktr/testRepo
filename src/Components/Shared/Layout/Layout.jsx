@@ -6,7 +6,7 @@ import SideBarRight from './SideBarRight';
 import { DashBoardWrapper } from "./styles";
 
 const Layout =(props)=>{
-    const{children}=props;
+    const{children,rightNav}=props;
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -33,7 +33,9 @@ const Layout =(props)=>{
                     <Box sx={{width:'100%',padding:'0px 15px'}}>
                         {children}
                     </Box>
-                    <SideBarRight/>
+                    {rightNav && (
+                        <SideBarRight/>
+                    )}
                 </DashBoardWrapper>
             </Box>
         </Box>
