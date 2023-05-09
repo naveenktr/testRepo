@@ -39,10 +39,10 @@ const MUITheme = createTheme({
     },
     background: {
       gradient: "radial-gradient(circle, #259AEA 0.04%, #136BD6 100%)",
-      primary: "#E8F4FE",
+      primary: "#00529a",
       secondary: "#D1EAFE",
-      darkBlue: "#132870",
-      lightBlue: "#F3F9FE",
+      darkBlue: "#01224f",
+      lightBlue: "#98daf8",
       btnBg: "#041e42",
       white: "#fff",
       grey: "#F3F3F2",
@@ -94,7 +94,177 @@ const MUITheme = createTheme({
       fontSize: 14,
       lineHeight: "21px"
     }
-  }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'primary' &&{
+              backgroundColor: MUITheme.palette.background.primary,
+              color: '#fff',
+              cursor:'pointer',
+              '&:hover':{
+                backgroundColor: MUITheme.palette.background.darkBlue,
+              },
+              '& +.MuiButton-root': {
+                marginLeft:'15px',
+              },
+              '&.Mui-disabled': {
+                backgroundColor: MUITheme.palette.background.lightBlue,
+                color: '#fff',
+              },
+              ...(ownerState.rounded &&{
+                borderRadius:'20px',
+              }),
+            }),
+            ...(ownerState.size === 'medium' && {
+              backgroundColor: "#00529a",
+              height:'40px',
+              padding:'9px 30px',
+              textTransform:'unset',
+              fontSize: '14px',
+              lineHeight: '22px',
+
+            }),
+            ...(ownerState.size === 'large' && {
+              backgroundColor: "#00529a",
+              borderRadius:'24px',
+              height:'47px',
+              padding:'11px 40px',
+              textTransform:'unset',
+              fontSize: '17px',
+              lineHeight: '25px',
+            }),
+            ...(ownerState.size === 'small' && {
+              backgroundColor: "#00529a",
+              borderRadius:'24px',
+              height:'30px',
+              padding:'4px 20px',
+              textTransform:'unset',
+              fontSize: '14px',
+              lineHeight: '22px',
+            }),
+            ...(ownerState.disabled &&{
+              backgroundColor: MUITheme.palette.background.lightBlue,
+            }),
+            ...(ownerState.variant === 'outlined' &&
+              ownerState.color === 'primary' &&{
+              backgroundColor: '#fff',
+              color: '#055CE5',
+              cursor:'pointer',
+              '&:hover':{
+                borderColor: MUITheme.palette.background.darkBlue,
+                color: MUITheme.palette.background.darkBlue,
+              },
+              '&.Mui-disabled': {
+                borderColor: MUITheme.palette.background.lightBlue,
+                color: MUITheme.palette.background.lightBlue,
+              },
+              ...(ownerState.size === 'medium' && {
+                height:'40px',
+                padding:'9px 30px',
+                textTransform:'unset',
+                fontSize: '14px',
+                lineHeight: '22px',
+              })
+            }),
+            ...(ownerState.variant === 'contained' &&
+            ownerState.color === 'success' &&{
+              backgroundColor:'rgb(46, 125, 50)',
+              '&:hover':{
+                backgroundColor:'rgb(27, 94, 32)',
+              },
+            }),
+        }),
+      },
+    },
+    MuiFormControl:{
+      styleOverrides:{
+        root: ({ ownerState }) => ({
+          '& legend':{'& span':{display:'none'},},
+        }),
+      },
+      defaultProps: {
+        fullWidth: true,
+      },
+    },
+    MuiTextField:{
+      styleOverrides:{
+        root: ({ ownerState }) => ({
+          ...(ownerState.variant === 'outlined' &&{
+            textTransform:'unset',
+            fontSize: '14px',
+            lineHeight: '22px',
+            '& legend':{'& span':{display:'none'},},
+          }),
+        })
+      },
+      defaultProps: {
+        variant: 'outlined',
+        fullWidth: true,
+        InputLabelProps: { shrink: true }, 
+      },
+    },
+    MuiOutlinedInput:{
+      styleOverrides:{
+        root: ({ ownerState }) => ({
+            height:'40px',
+            textTransform:'unset',
+            fontSize: '14px',
+            lineHeight: '22px',
+            marginBottom:'30px',
+            Input:{
+              padding:MUITheme.spacing(2)
+            },
+        }),
+      },
+      
+    },
+    MuiFormLabel:{
+      styleOverrides:{
+        root: ({ ownerState }) => ({
+          transform:'none',
+          fontWeight: 600,
+          fontSize: '14px',
+          lineHeight: '19px',
+          color:"#232323",
+          cursor:'pointer',
+          position:'unset',
+          marginBottom:'8px',
+          "&.Mui-focused": {
+            color:"#232323",
+          },
+          
+        }),
+      },
+      defaultProps: {
+        shrink: true
+      },
+    },
+    MuiInputLabel:{
+      styleOverrides:{
+        root: ({ ownerState }) => ({
+          color:MUITheme.palette.text.textColor,
+          position:'relative',
+          transform:'unset',
+          fontSize:'14px',
+          pointerEvents:'unset',
+          overflow:'auto',
+          "&.Mui-focused": {
+            color:"#232323",
+          },
+          '&.Mui-error':{
+            color:'#333',
+          }
+          
+        }),
+      },
+      defaultProps: {
+        shrink: false
+      },
+    },
+  },
 });
 
 export default MUITheme;
