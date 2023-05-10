@@ -7,6 +7,7 @@ import CustomCard from "./Components/Card/Card";
 import DashboardTable from "./Components/DashboardTable/DashboardTable";
 import Layout from "./Components/Shared/Layout/Layout";
 import ChartPage from "./Components/ChartPage";
+import SearchPage from "./Components/SearchPage";
 
 export default function App() {
   return (
@@ -32,7 +33,8 @@ export default function App() {
             <Box mt={2}>
               <DashboardTable/>
             </Box> */}
-            <ChartPage/>
+            {/* <ChartPage/> */}
+            <SearchPage/>
           </div>
         </>
       </Layout>
