@@ -1,13 +1,7 @@
-import { Box, Button, Card, CardContent, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
+import {  Button, Card, CardContent, Grid, Paper, Table, TableBody, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import { StyledTableCell, StyledTableRow } from "./styles";
-import { useState } from "react";
 const ChartPage =()=>{
-    const [age, setAge] = useState('');
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
     function createData(name, calories, fat, carbs, protein) {
         return { name, calories, fat, carbs, protein };
       }
@@ -76,70 +70,7 @@ const ChartPage =()=>{
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Box sx={{margin:'20px 0px'}}>
-                    <Grid container spacing={2} sx={{marginBottom:2}}>
-                        <Grid item md={5}>
-                            <TextField fullWidth id="outlined-basic" label="Disease" variant="outlined" placeholder="Ex. Rheumatiod" />
-                        </Grid>
-                        <Grid item md={5}>
-                            <TextField fullWidth id="outlined-basic" label="Brand Name or Active Ingredient" variant="outlined" placeholder="Ex. Xeljanz" />
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2} sx={{marginBottom:2}}>
-                        <Grid item md={5}>
-                            <TextField fullWidth id="outlined-basic" label="Therapeutic Area" variant="outlined" placeholder="Ex. Rheumatology" />
-                        </Grid>
-                        <Grid item md={5}>
-                            <Typography sx={{textAlign:'center'}}>Approval Date</Typography>
-                            <Grid container spacing={2}>
-                                <Grid item md={6}>
-                                    <TextField fullWidth id="outlined-basic" label="From" variant="outlined" placeholder="MM/YYYY" />
-                                </Grid>
-                                <Grid item md={6}>
-                                    <TextField fullWidth id="outlined-basic" label="To" variant="outlined" placeholder="MM/YYYY" />
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2} sx={{marginBottom:2}}>
-                        <Grid item md={5}>
-                            <TextField fullWidth id="outlined-basic" label="Therapeutic Area" variant="outlined" placeholder="Ex. Rheumatology" />
-                        </Grid>
-                        <Grid item md={5}>
-                            <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    value={age}
-                                    label="Age"
-                                    onChange={handleChange}
-                                    >
-                                    <MenuItem value={10}>Ten</MenuItem>
-                                    <MenuItem value={20}>Twenty</MenuItem>
-                                    <MenuItem value={30}>Thirty</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2} sx={{marginBottom:2}}>
-                        <Grid item md={10}>
-                            <Box sx={{padding:'40px 0px 20px',textAlign:'center'}}>
-                                <Button variant="contained" color="success" sx={{minWidth:'200px'}}>Submit</Button>
-                            </Box>
-                            <Box sx={{padding:'40px 0px 20px',textAlign:'center'}}>
-                                <Button variant="contained" color="primary">Submit</Button>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2} sx={{marginBottom:2}}>
-                        <Grid item md={10}>
-                            <Box sx={{padding:'40px 0px 20px',textAlign:'center'}}>
-                                <Button variant="contained" color="success" sx={{minWidth:'200px'}}>Submit</Button>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Box>
+                
             </div>
         </>
     )
